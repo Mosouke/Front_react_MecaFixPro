@@ -1,0 +1,112 @@
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+$primary-color: #0094FF;
+$secondary-color: #004b81;
+$text-color: #FFFFFF;
+$font-roboto: 'Roboto', sans-serif;
+$font-orbitron: 'Orbitron', sans-serif;
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-width: 100%;
+}
+
+/* Navigation */
+nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px 0px;
+    margin: auto;
+    ul {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        list-style-type: none;
+        gap: 5px;
+
+        li {
+            border: 1px solid transparent;
+            background-color: $primary-color;
+            border-radius: 5px;
+            padding: 5px 10px;
+
+            a {
+                font-family: $font-roboto;
+                color: $text-color;
+                text-decoration: none;
+                font-size: 16px;
+                letter-spacing: 1px;
+            }
+
+            &:hover, &:focus-within {
+                background-color: $secondary-color;
+                cursor: pointer;
+            }
+        }
+    }
+}
+
+.connected {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    
+    
+}
+
+/* Header */
+header {
+    display: grid;
+    max-width: 100%;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    border-radius: 10px;
+    margin: auto;
+    img {
+        width: 80%; 
+        margin: 10px auto;
+        border-radius: 5px;
+    }
+    .profile_img {
+        width: 50%;
+        object-fit: contain;
+        margin: 10px auto;
+        border-radius: 50%;
+        border: 2px solid $primary-color;
+        cursor: pointer;
+        &:hover {
+            border: 2px solid $secondary-color;
+            cursor: pointer;
+        }
+    }
+}
+
+/* Media query pour les tablettes (à partir de 768px) */
+@media (min-width: 768px) {
+    nav ul {
+        flex-direction: row;
+        gap: 15px;
+    }
+
+    nav ul li {
+        padding: 10px 20px;
+    }
+
+    header {
+        max-width: 600px; // Largeur adaptée aux tablettes
+    }
+
+    img {
+        width: 60%;
+    }
+}
+
+/* Media query pour les desktops (à partir de 1024px) */
