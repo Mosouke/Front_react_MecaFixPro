@@ -9,7 +9,7 @@
 
 $primary-color: #0094FF;
 $secondary-color: #004b81;
-$bg-color-input: #414141;
+$bg-color-section: #414141;
 $text-color-black: #000000;
 $text-color-white: #FFFFFF;
 $font-roboto: 'Roboto', sans-serif;
@@ -17,5 +17,169 @@ $font-orbitron: 'Orbitron', sans-serif;
 
 body {
     min-width: 100%;
-    padding: 0 10px;
+    font-family: $font-roboto;
+}
+
+section.reserch {
+    max-width: 700px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px 10px; 
+    margin: 20px auto 40px;
+    
+    h1 {
+        font-family: $font-orbitron;
+        font-size: 22px; 
+        font-weight: bold;
+        color: $text-color-black;
+        text-align: center;
+        margin-bottom: 15px;
+    }
+
+    div.bgImage {
+        background-image: url('/image/bg_image.webp');
+        background-size: contain; 
+        background-repeat: no-repeat;
+        background-position: center;
+        width: 100%;
+        height: 250px; 
+
+        .searchbar {
+            width: 90%; 
+            margin: 20% auto; 
+        }
+    }
+
+    @media (min-width: 768px) {
+        h1 {
+            font-size: 28px;
+            text-align: center;
+        }
+
+        div.bgImage {
+            height: 400px;
+
+            .searchbar {
+                width: 100%;
+                margin-top: 25%;
+            }
+        }
+    }
+
+    @media (min-width: 1024px) {
+        h1 {
+            font-size: 32px;
+        }
+
+        div.bgImage {
+            height: 450px;
+        }
+    }
+}
+
+section.how-it-works {
+    background-color: $bg-color-section;
+    padding: 20px 10px; 
+
+    .how-it-works-content {
+        max-width: 1440px;
+        margin: 0 auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+
+        h2 {
+            font-family: $font-orbitron;
+            font-size: 20px; 
+            font-weight: bold;
+            color: $primary-color;
+            text-align: center;
+        }
+
+        article {
+            width: 100%;
+            max-width: 400px;
+            display: flex;
+            flex-direction: column;
+            align-items: start;
+            gap: 10px;
+
+            h3 {
+                font-family: $font-orbitron;
+                font-size: 18px;
+                font-weight: bold;
+                color: $primary-color;
+                text-align: left;
+            }
+
+            p {
+                font-family: $font-roboto;
+                font-size: 14px; 
+                font-weight: normal;
+                color: $text-color-white;
+                text-align: left;
+            }
+        }
+
+        a.btn {
+            text-decoration: none;
+            transition: all 0.3s ease;
+
+            &:hover{
+                background-color: $secondary-color;
+                text-decoration: none;
+                transition: all 0.3s ease-in-out;
+            }
+        }
+    }
+
+    @media (min-width: 768px) {
+        padding: 40px 20px;
+
+        .how-it-works-content {
+            gap: 30px;
+
+            h2 {
+                font-size: 24px;
+            }
+
+            article {
+                max-width: 600px;
+
+                h3 {
+                    font-size: 20px;
+                }
+
+                p {
+                    font-size: 16px;
+                }
+            }
+        }
+    }
+
+    @media (min-width: 1024px) {
+        padding: 50px 30px;
+
+        .how-it-works-content {
+            gap: 40px;
+
+            h2 {
+                font-size: 28px;
+            }
+
+            article {
+                max-width: 650px;
+
+                h3 {
+                    font-size: 22px;
+                }
+
+                p {
+                    font-size: 18px;
+                }
+            }
+        }
+    }
 }

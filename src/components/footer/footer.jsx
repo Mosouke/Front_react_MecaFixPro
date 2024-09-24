@@ -10,9 +10,9 @@ export default function Footer() {
                         <img src="/image/logo_mecafixpro.webp" alt="logo" />
                     </div>
                     <div className="footer-links">
-                        <Link to="#">Mentions légales</Link>
+                        <Link to="/mentions_légales">Mentions légales</Link>
                         
-                        <Link to="#">Contact</Link>
+                        <Link to="mailto:nikodevweb@gmail.com">Contact</Link>
                     </div>
                     <div className="footer-copyright">
                         <p>Copyright © 2024 MecaFixPro. Tous droits réservés.</p>

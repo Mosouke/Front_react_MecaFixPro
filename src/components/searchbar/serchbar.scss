@@ -2,10 +2,12 @@
 
 $primary-color: #0094FF;
 $secondary-color: #004b81;
-$bg-color-input: #414141;
+$bg-color-input: #303134;
+
 $text-color-black: #000000;
 $text-color-white: #FFFFFF;
 $font-roboto: 'Roboto', sans-serif;
+$font-orbitron: 'Orbitron', sans-serif;
 
 * {
     margin: 0;
@@ -15,7 +17,7 @@ $font-roboto: 'Roboto', sans-serif;
 
 body {
     min-width: 100%;
-    padding: 10px;
+    
 }
 
 .btn {
@@ -96,6 +98,119 @@ body {
 
             &:hover {
                 background-color: $secondary-color;
+            }
+        }
+    }
+}
+
+
+
+// Responsive styles
+
+// Mobile (moins de 768px)
+@media (max-width: 767px) {
+    .searchbar {
+        padding: 10px 5px;
+
+        .inputSearch {
+            width: 90%;
+
+            input {
+                font-size: 14px;
+                padding: 8px;
+            }
+
+            #iconeRecherche {
+                right: 5px;
+            }
+        }
+
+        ul.autocomplete-list {
+            width: 90%;
+
+            li {
+                font-size: 14px;
+                padding: 8px;
+            }
+        }
+
+        .btn_sub {
+            .btn {
+                font-size: 14px;
+                padding: 8px 12px;
+            }
+        }
+    }
+}
+
+// Tablette (768px - 1024px)
+@media (min-width: 768px) and (max-width: 1024px) {
+    .searchbar {
+        max-width: 1440px;
+        padding: 15px;
+
+        .inputSearch {
+            width: 70%;
+
+            input {
+                font-size: 15px;
+                padding: 10px;
+            }
+
+            #iconeRecherche {
+                right: 8px;
+            }
+        }
+
+        ul.autocomplete-list {
+            width: 70%;
+
+            li {
+                font-size: 15px;
+                padding: 10px;
+            }
+        }
+
+        .btn_sub {
+            .btn {
+                font-size: 15px;
+                padding: 10px 14px;
+            }
+        }
+    }
+}
+
+// Desktop (1024px et plus)
+@media (min-width: 1024px) {
+    .searchbar {
+        padding: 20px;
+
+        .inputSearch {
+            width: 50%;
+
+            input {
+                font-size: 16px;
+                padding: 12px;
+            }
+
+            #iconeRecherche {
+                right: 10px;
+            }
+        }
+
+        ul.autocomplete-list {
+            width: 50%;
+
+            li {
+                font-size: 16px;
+                padding: 12px;
+            }
+        }
+
+        .btn_sub {
+            .btn {
+                font-size: 16px;
+                padding: 12px 16px;
             }
         }
     }

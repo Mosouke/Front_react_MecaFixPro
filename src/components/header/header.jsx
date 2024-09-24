@@ -26,7 +26,7 @@ export default function Header() {
                     )}
                 </div>
                 <nav>
-                    <ul>
+                    <ul className={isConnected ? 'connect' : ''}>
                         <li><Link to="/">Accueil</Link></li>
                         <li><Link to="/search">Recherche</Link></li>
                         {!isConnected ? (
