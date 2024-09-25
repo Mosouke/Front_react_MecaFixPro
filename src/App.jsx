@@ -12,7 +12,7 @@ export default function App() {
         <Route path="/" element={<Home />} />
         <Route path="/mentions_légales" element={<MentionsLegals />} />
         <Route path="/recherche" element={<SerchPageStep1 />} />
-        <Route path="/recherche_step2" element={<SerchPageStep2 />} />
+        <Route path="/recherche/:step2" element={<SerchPageStep2 />} />
       </Routes>
     </Router>
   )

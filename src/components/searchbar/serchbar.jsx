@@ -1,13 +1,19 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import '../searchbar/serchbar.scss';
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faMagnifyingGlassLocation } from "@fortawesome/free-solid-svg-icons";
 
-export default function SearchBar({ allCities, onCitySelect }) { 
+export default function SearchBar({ allCities, onCitySelect, selectedCity }) { 
     const [searchQuery, setSearchQuery] = useState("");
+
+    useEffect(() => {
+        if (selectedCity) {
+            setSearchQuery(selectedCity); 
+        }
+    }, [selectedCity]);
+
     const [filteredCities, setFilteredCities] = useState([]);
 
-   
     const handleSearch = (event) => {
         const query = event.target.value.toLowerCase();
         setSearchQuery(query);
@@ -29,7 +35,6 @@ export default function SearchBar({ allCities, onCitySelect }) {
         setSearchQuery(cityLabel);
         setFilteredCities([]);
 
-    
         if (onCitySelect) {
             onCitySelect(cityLabel); 
         }
@@ -40,7 +45,7 @@ export default function SearchBar({ allCities, onCitySelect }) {
             <div className="inputSearch">
                 <input
                     type="text"
-                    value={searchQuery}
+                    value={searchQuery} 
                     onChange={handleSearch}
                     placeholder="Rechercher une ville..."
                 />

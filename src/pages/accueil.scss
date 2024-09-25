@@ -18,6 +18,7 @@ $font-orbitron: 'Orbitron', sans-serif;
 body {
     min-width: 100%;
     font-family: $font-roboto;
+    color: $text-color-black;
 }
 
 section.reserch {
@@ -38,16 +39,30 @@ section.reserch {
     }
 
     div.bgImage {
+        position: relative;
+        width: 100%;
+        height: 250px;
+    }
+    
+    div.bgImage::before {
+        content: "";
         background-image: url('/image/bg_image.webp');
-        background-size: contain; 
+        opacity: 0.7;
+        background-size: contain;
         background-repeat: no-repeat;
         background-position: center;
+        position: absolute;
+        top: 0;
+        left: 0;
         width: 100%;
-        height: 250px; 
+        height: 100%;
+        z-index: -1; 
+        
 
-        .searchbar {
+        div.searchbar {
             width: 90%; 
             margin: 20% auto 0; 
+            z-index: 1;
         }
     }
 

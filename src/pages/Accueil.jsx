@@ -7,6 +7,7 @@ import { Link } from 'react-router-dom';
 
 export default function Home() {
     const [allCities, setAllCities] = useState([]);
+    const [selectedCity, setSelectedCity] = useState('');
 
     const fetchCities = async () => {
         try {
@@ -22,6 +23,11 @@ export default function Home() {
         fetchCities();
     }, []);
 
+    const handleCitySelect = (city) => {
+        setSelectedCity(city); 
+        localStorage.setItem('selectedCity', city);
+    };
+
     return (
         <>  
             <Header />
@@ -29,7 +35,10 @@ export default function Home() {
                 <section className="reserch">
                     <h1>Trouvez le garage parfait près de chez vous</h1>
                     <div className='bgImage'>
-                        <SearchBar allCities={allCities} />
+                        <SearchBar 
+                            allCities={allCities}
+                            onCitySelect={handleCitySelect}
+                        />
                         <div className="btn_sub">
                             <Link to="/recherche" className="btn">Rechercher</Link>
                         </div>

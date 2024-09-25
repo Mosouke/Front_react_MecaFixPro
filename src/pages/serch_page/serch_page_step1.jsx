@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import InputTypeOfServ from '../../components/input_option_for_type_of_serv_and_serv_spe/input_type_of_serv';
+import InputTypeOfServ from '../../components/input_option_for_type_of_serv/input_type_of_serv';
 import Header from '../../components/header/header';
 import Footer from '../../components/footer/footer';
 import SearchBar from '../../components/searchbar/serchbar';
@@ -9,10 +9,9 @@ import './serch_page_step1.scss';
 export default function SerchPageStep1() {
     const [allTypesOfServ, setAllTypesOfServ] = useState([]);
     const [allCities, setAllCities] = useState([]);
-
-    const [selectedCity, setSelectedCity] = useState(null); 
-    const [selectedService, setSelectedService] = useState(null); 
-    const [errorMessage, setErrorMessage] = useState(''); 
+    const [selectedCity, setSelectedCity] = useState(localStorage.getItem('selectedCity') || ''); 
+    const [selectedService, setSelectedService] = useState(localStorage.getItem('selectedService') || '');
+    const [errorMessage, setErrorMessage] = useState('');
 
     const fetchTypesOfServ = async () => {
         try {
@@ -39,9 +38,19 @@ export default function SerchPageStep1() {
         fetchCities();
     }, []);
 
+    const handleCitySelect = (city) => {
+        setSelectedCity(city);
+        localStorage.setItem('selectedCity', city); 
+    };
+
+    const handleServiceSelect = (service) => {
+        setSelectedService(service);
+        localStorage.setItem('selectedService', service); 
+    };
+
     const handleNextClick = (e) => {
         if (!selectedCity || !selectedService) {
-            e.preventDefault(); 
+            e.preventDefault();
             setErrorMessage('Veuillez sélectionner une ville et un type de service.');
             return;
         }
@@ -54,11 +63,20 @@ export default function SerchPageStep1() {
             <main>
                 <section className='serch_page_step1'>
                     <h1>Recherche</h1>
-                    <SearchBar allCities={allCities} onCitySelect={setSelectedCity} /> 
-                    <InputTypeOfServ typesOfServices={allTypesOfServ} onServiceSelect={setSelectedService} /> 
-                    {errorMessage && <p className="error-message">{errorMessage}</p>} 
+                    <SearchBar 
+                        allCities={allCities} 
+                        onCitySelect={handleCitySelect} 
+                        selectedCity={selectedCity} 
+                    />
+                    <InputTypeOfServ 
+                        typesOfServices={allTypesOfServ} 
+                        onServiceSelect={handleServiceSelect} 
+                    />
+
+                    {errorMessage && <p className="error-message">{errorMessage}</p>}
+                    
                     <div className='btn_sub'>
-                        <Link to="/recherche_step2" className="btn" onClick={handleNextClick}>Suivant</Link> 
+                    <Link to="/recherche/step2" className="btn" onClick={handleNextClick}>Suivant</Link>
                     </div>
                 </section>
             </main>
