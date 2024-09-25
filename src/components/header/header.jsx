@@ -28,7 +28,7 @@ export default function Header() {
                 <nav>
                     <ul className={isConnected ? 'connect' : ''}>
                         <li><Link to="/">Accueil</Link></li>
-                        <li><Link to="/search">Recherche</Link></li>
+                        <li><Link to="/recherche">Recherche</Link></li>
                         {!isConnected ? (
                             <li><Link to="/login">Connexion</Link></li>
                         ) : (

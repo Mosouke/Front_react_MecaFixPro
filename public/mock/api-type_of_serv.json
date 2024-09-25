@@ -1,0 +1,125 @@
+{
+    "types_de_services": [
+      {
+        "type": "Garages Généralistes",
+        "services_specifiques": [
+          "Vidange d'huile",
+          "Remplacement des filtres (huile, air, carburant, habitacle)",
+          "Contrôle et remplacement des bougies",
+          "Vérification et ajustement des niveaux de liquides (freins, refroidissement, direction assistée)",
+          "Vérification de l’état des pneus et des freins"
+        ]
+      },
+      {
+        "type": "Réparations Mécaniques",
+        "services_specifiques": [
+          "Remplacement de la courroie de distribution",
+          "Réparation ou remplacement du système d'embrayage",
+          "Réparation du système de transmission",
+          "Remplacement de la batterie",
+          "Réparation du système de refroidissement (radiateur, pompe à eau)"
+        ]
+      },
+      {
+        "type": "Systèmes de Freinage",
+        "services_specifiques": [
+          "Remplacement des plaquettes et disques de frein",
+          "Purge et remplacement du liquide de frein",
+          "Réparation ou remplacement des étriers de frein"
+        ]
+      },
+      {
+        "type": "Systèmes de Suspension et Direction",
+        "services_specifiques": [
+          "Remplacement des amortisseurs",
+          "Réparation ou remplacement des ressorts",
+          "Réglage de la géométrie des roues (parallélisme)"
+        ]
+      },
+      {
+        "type": "Garages de Carrosserie et Peinture",
+        "services_specifiques": [
+          "Réparation de bosses et éraflures",
+          "Peinture complète ou partielle",
+          "Remplacement de pare-chocs, ailes, capots, etc.",
+          "Réparation ou remplacement de pare-brise et vitres"
+        ]
+      },
+      {
+        "type": "Garages Électriques et Électroniques",
+        "services_specifiques": [
+          "Diagnostic électronique",
+          "Réparation des systèmes d’éclairage (phares, feux arrière)",
+          "Réparation des systèmes de climatisation et chauffage",
+          "Installation et réparation de systèmes audio et multimédia",
+          "Réparation ou remplacement des alternateurs et démarreurs"
+        ]
+      },
+      {
+        "type": "Garages Pneumatiques",
+        "services_specifiques": [
+          "Vente et montage de pneus",
+          "Équilibrage des roues",
+          "Réparation de crevaisons",
+          "Géométrie et alignement des roues"
+        ]
+      },
+      {
+        "type": "Garages de Performance et Tuning",
+        "services_specifiques": [
+          "Installation de systèmes d’échappement sport",
+          "Remplacement des filtres à air par des modèles haute performance",
+          "Reprogrammation du moteur (chiptuning)",
+          "Installation de suspensions sport"
+        ]
+      },
+      {
+        "type": "Garages de Transmission",
+        "services_specifiques": [
+          "Réparation et remplacement de boîtes de vitesses manuelles et automatiques",
+          "Remplacement d’embrayages"
+        ]
+      },
+      {
+        "type": "Garages Diesel",
+        "services_specifiques": [
+          "Réparation et entretien des moteurs diesel",
+          "Diagnostic et réparation des systèmes de gestion du carburant",
+          "Remplacement des bougies de préchauffage"
+        ]
+      },
+      {
+        "type": "Garages 4x4 et Véhicules Utilitaires",
+        "services_specifiques": [
+          "Réparation et entretien des systèmes de transmission 4x4",
+          "Réparation et remplacement des systèmes de suspension renforcée"
+        ]
+      },
+      {
+        "type": "Garages Véhicules Électriques et Hybrides",
+        "services_specifiques": [
+          "Entretien des batteries haute tension",
+          "Diagnostic et réparation des systèmes de gestion électrique",
+          "Remplacement des composants spécifiques aux véhicules électriques (moteurs électriques, onduleurs)"
+        ]
+      },
+      {
+        "type": "Services de Dépannage et Remorquage",
+        "services_specifiques": [
+          "Dépannage sur place",
+          "Remorquage vers le garage le plus proche",
+          "Assistance en cas de panne ou d’accident"
+        ]
+      },
+      {
+        "type": "Services Additionnels",
+        "services_specifiques": [
+          "Pré-contrôle technique",
+          "Contrôle technique",
+          "Nettoyage et lavage complet",
+          "Détail automobile (polissage, traitement céramique)"
+        ]
+      }
+    ]
+  }
+  

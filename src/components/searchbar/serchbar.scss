@@ -7,7 +7,6 @@ $bg-color-input: #303134;
 $text-color-black: #000000;
 $text-color-white: #FFFFFF;
 $font-roboto: 'Roboto', sans-serif;
-$font-orbitron: 'Orbitron', sans-serif;
 
 * {
     margin: 0;
@@ -17,7 +16,6 @@ $font-orbitron: 'Orbitron', sans-serif;
 
 body {
     min-width: 100%;
-    
 }
 
 .btn {
@@ -32,12 +30,14 @@ body {
 
 .searchbar {
     display: flex;
+    position: relative;
     flex-direction: column;
     align-items: center;
     padding: 20px 0;
 
     .inputSearch {
-        width: 100%;
+        width: 95%;
+        max-width: 400px;
         position: relative;
         display: flex;
         align-items: center;
@@ -45,6 +45,7 @@ body {
 
         input {
             width: 100%;
+            max-width: 400px;
             padding: 10px;
             border-radius: 5px;
             border: 2px solid $primary-color;
@@ -55,6 +56,7 @@ body {
 
             &:focus {
                 outline: none;
+
             }
         }
 
@@ -66,7 +68,10 @@ body {
     }
 
     ul.autocomplete-list {
-        width: 100%;
+        width: 95%;
+        position: absolute;
+        top: 70px;
+        max-width: 400px;
         list-style-type: none;
         padding: 0;
         color: $text-color-white;
@@ -85,35 +90,17 @@ body {
             }
         }
     }
-
-    .btn_sub {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        gap: 10px;
-        padding: 10px 0;
-
-        .btn {
-            background-color: $primary-color;
-
-            &:hover {
-                background-color: $secondary-color;
-            }
-        }
-    }
 }
-
-
 
 // Responsive styles
 
 // Mobile (moins de 768px)
-@media (max-width: 767px) {
+@media (min-width: 767px) {
     .searchbar {
         padding: 10px 5px;
 
         .inputSearch {
-            width: 90%;
+            width: 54%;
 
             input {
                 font-size: 14px;
