@@ -11,11 +11,11 @@ $font-orbitron: 'Orbitron', sans-serif;
 
 .serch_page_step2 {
     background-color: $bg-color-section;
-    padding: 20px 10px; 
+    padding: 40px 10px; 
     display: grid;
     flex-direction: column;
     align-items: center;    
-    gap: 40px;
+    
     margin: auto;
 
     h1 {
@@ -24,6 +24,7 @@ $font-orbitron: 'Orbitron', sans-serif;
         font-weight: bold;
         color: $text-color-white;
         text-align: center;
+        margin-bottom: 30px;
     }
 
     p.error-message {

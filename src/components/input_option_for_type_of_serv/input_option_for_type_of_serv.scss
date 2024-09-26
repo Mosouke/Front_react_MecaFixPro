@@ -5,7 +5,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    scrollbar-width: none; // Ajout de la propriété scrollbar-width
+    scrollbar-width: none; 
 }
 
 $primary-color: #015592;
@@ -27,11 +27,11 @@ body {
     align-items: center;
     padding: 20px 0;
     gap: 20px;
-    margin: auto; // Ajout de margin: auto
+    margin: auto; 
 
     h2 {
         font-family: $font-orbitron;
-        font-size: 18px; // Changé à 18px pour correspondre à .input_type_of_serv_spe
+        font-size: 18px; 
         font-weight: bold;
         color: $text-color-white;
         text-align: center;
@@ -39,7 +39,7 @@ body {
 
     .custom-dropdown {
         position: relative;
-        width: 100%; // Changé à 100% pour correspondre à .input_type_of_serv_spe
+        width: 100%; 
         margin: auto;
 
         button {

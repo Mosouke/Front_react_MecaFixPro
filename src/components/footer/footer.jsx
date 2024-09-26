@@ -7,7 +7,7 @@ export default function Footer() {
             <div className="footer">
                 <div className="footer-content">
                     <div className="footer-logo">
-                        <img src="/image/logo_mecafixpro.webp" alt="logo" />
+                        <img src="/image/logo_mecafixpro.webp" alt="logo du site MecaFixPro" />
                     </div>
                     <div className="footer-links">
                         <Link to="/mentions_légales">Mentions légales</Link>
@@ -20,5 +20,5 @@ export default function Footer() {
                 </div>
             </div>
         </footer>
-    )
-}
+        )
+    }

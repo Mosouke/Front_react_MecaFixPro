@@ -17,7 +17,7 @@ export default function Header() {
             <header>
                 <div className={isConnected ? 'connected' : ''}>
                     <Link to="/">
-                        <img src={logo} alt="logo" />
+                        <img src={logo} alt="logo du site MecaFixPro" />
                     </Link>
                     {isConnected && (
                         <Link to="/profil">

@@ -4,6 +4,7 @@ import Footer from '../../components/footer/footer';
 import InputTypeOfServ from '../../components/input_option_for_type_of_serv/input_type_of_serv';
 import InputTypeOfServSpe from '../../components/input_option_for_type_serv_spe/input_type_of_serv_spe';
 import "./serch_page_step2.scss";
+import { Link } from 'react-router-dom';
 
 export default function SerchPageStep2() {
     const [allTypesOfServ, setAllTypesOfServ] = useState([]);
@@ -36,15 +37,12 @@ export default function SerchPageStep2() {
         fetchTypesOfServSpe();
     }, []);
 
-    const handleServiceChange = (service) => {
-        console.log("Service sélectionné:", service);
-        setSelectedService(service);
-        localStorage.setItem('selectedService', service); 
+    const handleServiceChange = (service) => {        
+        setSelectedService(service);       
     };
 
     const handleServiceSpeChange = (serviceSpe) => {
         setSelectedServiceSpe(serviceSpe);
-        localStorage.setItem('selectedServiceSpe', serviceSpe); 
     };
 
     return (
@@ -66,6 +64,9 @@ export default function SerchPageStep2() {
                             selectedService={selectedServiceSpe} 
                             onServiceSelect={handleServiceSpeChange}
                         />
+                    </div>
+                    <div className='btn_sub'>
+                        <Link to="#" className="btn">Suivant</Link>
                     </div>
                 </section>
             </main>
