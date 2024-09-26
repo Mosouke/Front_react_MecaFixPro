@@ -3,6 +3,7 @@ import Header from '../../components/header/header';
 import Footer from '../../components/footer/footer';
 import InputTypeOfServ from '../../components/input_option_for_type_of_serv/input_type_of_serv';
 import InputTypeOfServSpe from '../../components/input_option_for_type_serv_spe/input_type_of_serv_spe';
+import "./serch_page_step2.scss";
 
 export default function SerchPageStep2() {
     const [allTypesOfServ, setAllTypesOfServ] = useState([]);

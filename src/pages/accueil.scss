@@ -7,8 +7,9 @@
     box-sizing: border-box;
 }
 
-$primary-color: #0094FF;
-$secondary-color: #004b81;
+$primary-color2: #0195ff;
+$primary-color: #015592;
+$secondary-color: #00253f;
 $bg-color-section: #414141;
 $text-color-black: #000000;
 $text-color-white: #FFFFFF;
@@ -19,6 +20,7 @@ body {
     min-width: 100%;
     font-family: $font-roboto;
     color: $text-color-black;
+    
 }
 
 section.reserch {
@@ -126,7 +128,7 @@ section.how-it-works {
             font-family: $font-orbitron;
             font-size: 20px; 
             font-weight: bold;
-            color: $primary-color;
+            color: $primary-color2;
             text-align: center;
         }
 
@@ -142,7 +144,7 @@ section.how-it-works {
                 font-family: $font-orbitron;
                 font-size: 18px;
                 font-weight: bold;
-                color: $primary-color;
+                color: $primary-color2;
                 text-align: left;
             }
 
