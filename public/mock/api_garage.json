@@ -1,0 +1,115 @@
+{
+    "garages": [
+      {
+        "city": "Nice",
+        "locations": [
+          {
+            "name": "Garage Riviera",
+            "address": "10 Avenue Jean Médecin, 06000 Nice",
+            "phone": "+33 4 93 53 67 89",
+            "rating": 4.2,
+            "distance": 8.5,
+            "availability": true
+          },
+          {
+            "name": "Mécanique Côte d'Azur",
+            "address": "25 Boulevard Gambetta, 06000 Nice",
+            "phone": "+33 4 93 45 78 12",
+            "rating": 3.8,
+            "distance": 5.2,
+            "availability": false
+          },
+          {
+            "name": "Auto Service Nice",
+            "address": "58 Rue de France, 06000 Nice",
+            "phone": "+33 4 92 12 34 56",
+            "rating": 4.5,
+            "distance": 7.1,
+            "availability": true
+          }
+        ]
+      },
+      {
+        "city": "Marseille",
+        "locations": [
+          {
+            "name": "Garage Marseille Centre",
+            "address": "14 Rue de la République, 13001 Marseille",
+            "phone": "+33 4 91 52 63 74",
+            "rating": 4.1,
+            "distance": 7.3,
+            "availability": true
+          },
+          {
+            "name": "Phocéen Auto",
+            "address": "33 Boulevard Chave, 13005 Marseille",
+            "phone": "+33 4 91 23 45 67",
+            "rating": 4.6,
+            "distance": 3.1,
+            "availability": false
+          },
+          {
+            "name": "Carrosserie Saint-Antoine",
+            "address": "12 Rue Saint-Antoine, 13015 Marseille",
+            "phone": "+33 4 91 78 32 45",
+            "rating": 4.0,
+            "distance": 6.2,
+            "availability": true
+          },
+          {
+            "name": "Sud Auto Services",
+            "address": "99 Avenue du Prado, 13008 Marseille",
+            "phone": "+33 4 91 11 22 33",
+            "rating": 3.9,
+            "distance": 8.8,
+            "availability": false
+          }
+        ]
+      },
+      {
+        "city": "Paris",
+        "locations": [
+          {
+            "name": "Garage Paris Centre",
+            "address": "5 Rue de Rivoli, 75004 Paris",
+            "phone": "+33 1 42 78 90 12",
+            "rating": 4.7,
+            "distance": 2.5,
+            "availability": true
+          },
+          {
+            "name": "Auto Passion Paris",
+            "address": "123 Avenue de la République, 75011 Paris",
+            "phone": "+33 1 43 56 78 90",
+            "rating": 4.4,
+            "distance": 6.8,
+            "availability": true
+          },
+          {
+            "name": "Garage de la Bastille",
+            "address": "56 Boulevard Beaumarchais, 75011 Paris",
+            "phone": "+33 1 49 24 36 58",
+            "rating": 4.2,
+            "distance": 3.5,
+            "availability": false
+          },
+          {
+            "name": "Réparation Rapide Paris 13",
+            "address": "88 Rue Bobillot, 75013 Paris",
+            "phone": "+33 1 45 65 12 34",
+            "rating": 3.8,
+            "distance": 9.0,
+            "availability": false
+          },
+          {
+            "name": "Garage Montmartre",
+            "address": "22 Rue Lepic, 75018 Paris",
+            "phone": "+33 1 53 94 23 45",
+            "rating": 4.3,
+            "distance": 4.7,
+            "availability": true
+          }
+        ]
+      }
+    ]
+  }

@@ -37,6 +37,16 @@ export default function SerchPageStep2() {
         fetchTypesOfServSpe();
     }, []);
 
+    useEffect(() => {
+       
+        localStorage.setItem('selectedService', selectedService);
+    }, [selectedService]);
+
+    useEffect(() => {
+       
+        localStorage.setItem('selectedServiceSpe', selectedServiceSpe);
+    }, [selectedServiceSpe]);
+
     const handleServiceChange = (service) => {        
         setSelectedService(service);       
     };
@@ -66,7 +76,7 @@ export default function SerchPageStep2() {
                         />
                     </div>
                     <div className='btn_sub'>
-                        <Link to="#" className="btn">Suivant</Link>
+                        <Link to="/resultat" className="btn">Suivant</Link>
                     </div>
                 </section>
             </main>
