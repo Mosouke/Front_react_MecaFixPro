@@ -1,29 +1,17 @@
 import React from 'react';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faStar } from '@fortawesome/free-solid-svg-icons';
-import { faStar as faStarEmpty } from '@fortawesome/free-regular-svg-icons';
+import StarRating from '../star_rating/star_rating';
 import './card_garage.scss';
+import { Link } from 'react-router-dom';
 
-export default function Card({ name, address, rating }) {
-    const fullStars = Math.floor(rating);
-    const emptyStars = 5 - fullStars;
-
+export default function Card({ name, address, rating, garage_Id }) {
     return (
         <div className="card-container">
             <h2>{name}</h2>
             <p>{address}</p>
             <div className='stars_butons_flex'>
-                <div>
-                    {[...Array(fullStars)].map((_, index) => (
-                        <FontAwesomeIcon key={index} icon={faStar} style={{ color: '#FFB904' }} />
-                    ))}
-                    {[...Array(emptyStars)].map((_, index) => (
-                        <FontAwesomeIcon key={index} icon={faStarEmpty} style={{ color: 'black' }} />
-                    ))}
-                </div>
-                <p>{rating} / 5</p>
+                <StarRating rating={rating} />
                 <div className="btn_sub">
-                    <a href="#" className="btn">Voir Plus</a>
+                    <Link to={`/garage/${garage_Id}`} className="btn">Voir Plus</Link>
                 </div>
             </div>
         </div>

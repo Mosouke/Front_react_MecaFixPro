@@ -6,6 +6,7 @@ $secondary-color: #00253f;
 $bg-color-section: #414141;
 $text-color-white: #FFFFFF;
 $text_color_error: #fd9191;
+$background-color-card: #D9D9D9;
 $font-roboto: 'Roboto', sans-serif;
 $font-orbitron: 'Orbitron', sans-serif;
 
@@ -91,8 +92,22 @@ $font-orbitron: 'Orbitron', sans-serif;
                     color: $text-color-white;
                     text-align: left;
                 }
+
             }
         }
+    }
+    .no-result {
+        font-family: $font-roboto;
+        font-size: 14px; 
+        font-weight: normal;
+        color: $secondary-color;
+        text-align: center;
+        padding: 10px 15px;
+        border: 1px solid transparent;
+        border-radius: 5px;
+        background-color: $background-color-card;
+        text-transform: capitalize;
+        font-weight: bold;
     }
 }
 

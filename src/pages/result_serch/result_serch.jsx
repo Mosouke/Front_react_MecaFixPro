@@ -16,6 +16,7 @@ export default function ResultSerch() {
     });
 
     const fetchGarages = async () => {
+        if (!selectedCity) return;
         try {
             const response = await fetch('/mock/api_garage.json'); 
             if (!response.ok) {
@@ -37,6 +38,7 @@ export default function ResultSerch() {
     };
 
     useEffect(() => {
+        console.log("Ville sélectionnée:", selectedCity); 
         fetchGarages();
     }, [selectedCity]);
 
@@ -92,16 +94,18 @@ export default function ResultSerch() {
 
                 <div className="garage-list">
                     {filteredGarages.length > 0 ? (
-                        filteredGarages.map((garage, index) => (
+                        filteredGarages.map((garage) => (
                             <Card 
-                                key={index}
+                                key={garage.garage_Id}
                                 name={garage.name} 
                                 address={garage.address} 
                                 rating={garage.rating}
+                                garage_Id={garage.garage_Id} 
                             />
                         ))
                     ) : (
-                        <p>Aucun garage trouvé pour {selectedCity}.</p>
+                        
+                        <p className="no-result">Aucun garage trouvé pour {selectedCity}.</p>
                     )}
                 </div>
             </div>
