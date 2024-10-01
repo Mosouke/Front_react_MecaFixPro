@@ -1,8 +1,10 @@
+import DateHeur from "../../components/chant_input_date_heur/input_date_heur";
 import Footer from "../../components/footer/footer";
 import Header from "../../components/header/header";
 import ProfilGarage from "../../components/profil_garage/profil_garage";
 import React, { useEffect, useState } from "react";
-import { useParams } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
+import './page info_garage.scss'
 
 const fetchGarage = async (garageId) => {
     try {
@@ -38,16 +40,21 @@ export default function PageInfoGarageRdv() {
     
         getGarage();
     }, [garageId]);
-    
-    
-
-    
 
     return (
         <>
             <Header />
             <main>
-                {garage ? <ProfilGarage garage={garage} /> : <p>Chargement...</p>}
+                <section>
+                    {garage ? <ProfilGarage garage={garage} /> : <p>Chargement...</p>}
+                </section>
+                <section className="input_date_heur">
+                    <h2>Choisir une date et une heure pour votre rendez-vous</h2>
+                    <DateHeur />
+                    <div className="btn_sub">
+                        <Link className="btn" to="#">Valider le rendez-vous</Link>
+                    </div>
+                </section>
             </main>
             <Footer />
         </>

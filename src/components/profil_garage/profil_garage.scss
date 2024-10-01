@@ -6,6 +6,7 @@ $bg-color: #414141;
 $bg-color_placeholder: #303134;
 $text-color-white: #FFFFFF;
 $primary-color: #015592;
+$secondary-color: #00253f;
 $font-roboto: 'Roboto', sans-serif;
 $font-orbitron: 'Orbitron', sans-serif;
 
@@ -15,7 +16,7 @@ $font-orbitron: 'Orbitron', sans-serif;
     padding: 2.5rem;
     border-radius: 0.5rem;
     max-width: 28rem;
-    margin: 0 auto;
+    margin: 50px auto;
   
     h1 {
         font-family: $font-orbitron;
@@ -48,3 +49,31 @@ $font-orbitron: 'Orbitron', sans-serif;
         }
     }
   }
+
+  .calendar {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    background-color: $bg-color;
+    padding-top: 50px;
+    padding-bottom: 50px;
+
+    .btn_sub {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+        padding: 10px 0;
+
+        .btn {
+            background-color: $primary-color;
+            text-decoration: none;
+
+            &:hover {
+                background-color: $secondary-color;
+            }
+        }
+    }
+
+}
